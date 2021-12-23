@@ -29,6 +29,14 @@ module.exports = {
         serif: ['Merriweather', 'serif'],
         mono: ['Fira Code', 'monospace'],
       },
+      backgroundImage: {
+        'codewall': "url('/assets/x.png')",
+        'gravel-lite': "url('/assets/gravel_lite.png')",
+        'gravel': "url('/assets/gravel.png')",
+       },
+       animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      }
     },
   },
   plugins: [

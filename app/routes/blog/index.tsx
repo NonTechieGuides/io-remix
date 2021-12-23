@@ -1,5 +1,5 @@
-import { Link, useLoaderData } from '@remix-run/react'
-import { getClient } from '~/lib/sanity/getClient'
+import { Link, useLoaderData } from "@remix-run/react";
+import { getClient } from "~/lib/sanity/getClient";
 
 export type Post = {
   slug: string;
@@ -16,10 +16,12 @@ export async function loader() {
 export default function Posts() {
   let posts = useLoaderData<Post[]>();
   return (
-    <div className="mt-12">
-      <h1>Blog Posts:</h1>
+    <div className="flex flex-col max-w-6xl mx-auto px-4 sm:px-6 h-screen mt-12">
+      <div className="m-auto text-center">
+        <h1 className="font-black text-4xl uppercase">Blog</h1>
+      </div>{" "}
       <ul>
-        {posts.map(post => (
+        {posts.map((post) => (
           <li key={post.slug}>
             <Link to={post.slug.current}>{post.title}</Link>
           </li>

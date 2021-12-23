@@ -4,10 +4,11 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
-import styles from './tailwind.css'
+import styles from "./tailwind.css";
+import Navbar from "./components/navbar_bd";
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
@@ -26,7 +27,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="container mx-auto px-4"> {/* adjust as needed for sitewite layout! */}
+      <body>
+        <Navbar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
