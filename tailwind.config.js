@@ -1,3 +1,4 @@
+const { transitionProperty } = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
@@ -36,7 +37,10 @@ module.exports = {
        },
        animation: {
         'spin-slow': 'spin 5s linear infinite',
-      }
+      },
+        transitionProperty: {
+          'left': 'left',
+        },
     },
   },
   plugins: [

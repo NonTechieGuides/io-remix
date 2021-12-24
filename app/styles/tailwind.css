@@ -11,11 +11,23 @@
   body {
     @apply font-mono bg-gravel-lite bg-base02 text-base2;
   }
+  nav > div > a {
+    @apply block;
+     {
+      /* to allow individual nav items to stack vertically ... dunno why it's needed! */
+    }
+  }
+  nav a {
+    @apply text-3xl md:text-base pb-4 md:pb-0 hover:text-yellow hover:italic;
+  }
   .active-link {
     @apply font-bold;
   }
   .active-link > span {
-    @apply bg-green shadow shadow-green text-[#FFD553];
+    @apply text-[#FFD553] md:border-b-4 py-6 border-[#FFD553] not-italic;
+  }
+  .active-link > button {
+    @apply bg-[#FFD553] text-yellow hover:bg-yellow hover:text-[#FFD553] shadow-2xl shadow-[#FFD553];
   }
   .article-content > div {
     /* @apply prose; */
